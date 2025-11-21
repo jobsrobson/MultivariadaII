@@ -1,0 +1,6 @@
+infra_cluster,causa_iluminação_deficiente,causa_demais_falhas_na_via,causa_falta_de_acostamento,causa_acesso_irregular,causa_acumulo_de_água_sobre_o_pavimento,causa_acumulo_de_areia_ou_detritos_sobre_o_pavimento,causa_acumulo_de_óleo_sobre_o_pavimento,causa_falta_de_elemento_de_contenção_que_evite_a_saída_do_leito_carroçável,causa_restrição_de_visibilidade_em_curvas_verticais,causa_declive_acentuado,causa_curva_acentuada,causa_sinalização_mal_posicionada,causa_desvio_temporário,causa_ausência_de_sinalização,causa_afundamento_ou_ondulação_no_pavimento,causa_acostamento_em_desnível,causa_deficiência_do_sistema_de_iluminação_sinalização,causa_pista_escorregadia
+0,0.0,0.05,0.01,0.0,0.0,0.04,0.06,0.07,0.01,0.02,0.02,0.03,0.01,0.03,0.01,0.01,0.04,0.0
+1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+2,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
