@@ -6,6 +6,9 @@
 # =============================================================================
 
 """
+
+https://www.perplexity.ai/search/tenho-o-seguinte-trabalho-de-a-QzyhG49UQiWw04q_CcV8UA#19
+
 Técnicas Estatísticas Utilizadas
 
 Agregação de Dados:
@@ -66,10 +69,6 @@ A análise multivariada robusta revelou que acidentes associados a infraestrutur
 
 """
 
-"""
-
-
-"""
 
 
 import pandas as pd
