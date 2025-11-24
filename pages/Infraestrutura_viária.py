@@ -37,24 +37,37 @@ plt.rcParams['savefig.dpi'] = 300
 plt.rcParams['font.size'] = 10
 
 # Funções
-
 def agregar_vitimas(group):
-    """Conta vítimas por estado físico em cada acidente"""
-    estados = group['estado_fisico'].value_counts().to_dict()
+    """
+    Agregação de vítimas por acidente
+    
+    Definições:
+    - VÍTIMA: Qualquer pessoa envolvida (incluindo ilesos)
+    """
+    # Remover duplicatas de pessoas (mesma pessoa em múltiplos eventos)
+    group_unico = group.drop_duplicates(subset='pesid', keep='first')
+    
+    # Contagem por estado físico
+    estados = group_unico['estado_fisico'].value_counts().to_dict()
+    n_mortos = estados.get('Óbito', 0) + estados.get('Morte', 0)
+    n_feridos_graves = estados.get('Lesões Graves', 0)
+    n_feridos_leves = estados.get('Lesões Leves', 0)
+    n_ilesos = estados.get('Ileso', 0)
+    n_nao_informado = estados.get('Não Informado', 0) + estados.get('0', 0)
+    total_vitimas = len(group_unico)
+    vitimas_com_lesao = n_mortos + n_feridos_graves + n_feridos_leves
     
     return pd.Series({
-        'total_vitimas': len(group),
-        'n_mortos': estados.get('Óbito', 0) + estados.get('Morte', 0),
-        'n_feridos_graves': estados.get('Lesões Graves', 0),
-        'n_feridos_leves': estados.get('Lesões Leves', 0),
-        'n_ilesos': estados.get('Ileso', 0),
-        'n_ignorados': len(group) - sum([
-            estados.get('Óbito', 0),
-            estados.get('Morte', 0),
-            estados.get('Lesões Graves', 0),
-            estados.get('Lesões Leves', 0),
-            estados.get('Ileso', 0)
-        ])
+        'total_vitimas': total_vitimas,
+        'n_mortos': n_mortos,
+        'n_feridos_graves': n_feridos_graves,
+        'n_feridos_leves': n_feridos_leves,
+        'n_ilesos': n_ilesos,
+        'n_nao_informado': n_nao_informado,
+        'vitimas_com_lesao': vitimas_com_lesao,
+        # Proporções
+        'prop_mortos': n_mortos / total_vitimas if total_vitimas > 0 else 0,
+        'prop_ilesos': n_ilesos / total_vitimas if total_vitimas > 0 else 0,
     })
 
 # Categorizar gravidade
@@ -186,13 +199,12 @@ st.header("Resumo dos Dados de Acidentes e Vítimas e estatísticas Descritivas"
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write(f"Total de registros (vítimas): **{len(df):,}**")
+    st.write(f"Total de registros: **{len(df):,}**")
     st.write(f"Acidentes únicos: **{df['id'].nunique():,}**")
-    st.write(f"Média de vítimas por acidente: **{len(df) / df['id'].nunique():.2f}**")
 
 with col2:
     st.write(f"\nAcidentes de infraestrutura: **{len(acidentes_infra):,} ({len(acidentes_infra)/df['id'].nunique()*100:.1f}%)**")
-    st.write(f"Vítimas desses acidentes: **{len(df_infra):,} ({len(df_infra)/len(df)*100:.1f}%)**")
+    st.write(f"Vítimas desses acidentes: **{df_analise['total_vitimas'].sum():,} ({df_analise['total_vitimas'].sum()/df['id'].nunique()*100:.1f}%)**")
     st.write(f"Acidentes únicos para análise: **{len(df_analise):,}**")
 
 with col3:
@@ -203,17 +215,17 @@ with col3:
 st.subheader("\nVariabilidade das variáveis categóricas:", divider=True)
 for var in variaveis_categoricas:
     n_categorias = df_analise[var].nunique()
-    categorias = df_analise[var].value_counts().to_dict()
-    st.write(f"  {var}: {n_categorias} categorias - {categorias}")
+    categorias = df_analise[var].unique()
+    st.write(f"  **{var}**: **{n_categorias}** categorias - {categorias}")
 
 if len(variaveis_validas) < len(variaveis_categoricas):
     removidas = set(variaveis_categoricas) - set(variaveis_validas)
     variaveis_categoricas = variaveis_validas
     st.write(f"\n⚠️ Variáveis removidas (sem variabilidade): {removidas}")
 
-st.write(f"\nVariáveis para análise: {len(variaveis_categoricas)}")
+st.write(f"\nVariáveis para análise: **{len(variaveis_categoricas)}**")
 
-st.write(f"Observações para análise: {len(df_modelo)}")
+st.write(f"Observações para análise: **{len(df_modelo)}**")
 
 # ==============================  Analise multivariada  ==============================
 # ====================  ANÁLISE DE CORRESPONDÊNCIA MÚLTIPLA (MCA) ====================
@@ -319,8 +331,3 @@ if not MCA_SUCESSO:
     
     metodo_reducao = 'PCA'
     df_cluster = df_modelo.copy()
-
-
-st.header("Análise de Clusters dos Acidentes com Base nas Dimensões Reduzidas", divider=True)
-
-st.write("\nDeterminando número ótimo de clusters...")
