@@ -10,5 +10,4 @@ psycopg2-binary
 prince
 factor_analyzer
 scipy
-unicodedata
 sqlalchemy
