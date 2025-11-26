@@ -7,10 +7,11 @@ sys.path.insert(1, '/home/toledo-cia/Documents/Projetos/MultivariadaII')
 from app import fetch_data
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
 import unicodedata
@@ -48,10 +49,14 @@ df_populacao.rename(columns={'CO_MUNICIPIO': 'codigo_ibge_municipio'}, inplace=T
 df_populacao['codigo_ibge_municipio'] = df_populacao['codigo_ibge_municipio'].astype(str)
 
 df_pib = fetch_data("""
-                    SELECT ano_pib, codigo_municipio_dv, vl_pib_per_capta
-    FROM public.pib_municipios
-    WHERE ano_pib = (SELECT MAX(ano_pib) FROM public.pib_municipios)
-""")
+                    SELECT 
+                        ano_pib, 
+                        codigo_municipio_dv, 
+                        vl_pib_per_capta
+                    FROM public.pib_municipios
+                    WHERE 
+                        ano_pib = (SELECT MAX(ano_pib) FROM public.pib_municipios)
+                    """)
 
 df_pib.rename(columns={'codigo_municipio_dv': 'codigo_ibge_municipio'}, inplace=True)
 df_pib['codigo_ibge_municipio'] = df_pib['codigo_ibge_municipio'].astype(str)
@@ -59,8 +64,10 @@ df_pib['vl_pib_per_capta'] = pd.to_numeric(df_pib['vl_pib_per_capta'], errors='c
 
 df_municipio_base = fetch_data("""
     SELECT 
-        codigo_ibge_municipio_dv, nome_municipio, cd_uf
-    FROM public.municipios
+        codigo_municipio_dv, 
+        nome_municipio, 
+        cd_uf
+    FROM public.municipio
 """)
 
 df_municipio_base.rename(columns={'codigo_municipio_dv': 'codigo_ibge_municipio', 'nome_municipio': 'municipio_nome'}, inplace=True)
@@ -127,11 +134,28 @@ else: interpretacao = "Forte"
 
 tipo = "Positiva" if corr_coef > 0 else "Negativa"
 
+# Passo A: Criar Categorias de Riqueza (Discretização)
+# Dividir o PIB em 3 grupos: Baixo (0-33%), Médio (33-66%), Alto (66-100%)
+df_analise['faixa_pib'] = pd.qcut(df_analise['vl_pib_per_capta'], q=3, labels=['Baixa Renda', 'Média Renda', 'Alta Renda'])
 
+# Passo B: Separar os grupos
+grupo_baixa = df_analise[df_analise['faixa_pib'] == 'Baixa Renda']['taxa_acidentes_100k']
+grupo_media = df_analise[df_analise['faixa_pib'] == 'Média Renda']['taxa_acidentes_100k']
+grupo_alta = df_analise[df_analise['faixa_pib'] == 'Alta Renda']['taxa_acidentes_100k']
 
+# Passo C: Rodar ANOVA
+f_stat, p_value_anova = stats.f_oneway(grupo_baixa, grupo_media, grupo_alta)
+
+X = df_analise[['vl_pib_per_capta', 'taxa_acidentes_100k']].values
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Criar 3 Clusters (Grupos)
+kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
+df_analise['cluster'] = kmeans.fit_predict(X_scaled)
 
 # =========================  Dashboard  =========================
-st.header("Análise de Acidentes de Trânsito por Município e PIB")
+st.title("Análise de Acidentes de Trânsito por Município e PIB")
 st.write(f"Acidentes agrupados: {df_acidentes_count.shape[0]} municípios.")
 
 st.subheader("Top 5 Municípios com Maior Taxa de Acidentes")
@@ -171,3 +195,57 @@ st.pyplot(fig)
 
 
 st.write(f"Coeficiente de Correlação (Pearson): {corr_coef:.4f}.\t P-valor: {p_value:.4f}.\t Interpretação: Correlação {interpretacao} {tipo}")
+
+st.header("Análise de Variância (ANOVA) entre Faixas de Renda")
+st.write(f"Estatística F: {f_stat:.4f}")
+st.write(f"P-valor (ANOVA): {p_value_anova:.4f}")
+
+if p_value_anova < 0.05:
+    st.write(">> Conclusão: Há diferença estatisticamente significativa entre os grupos de renda.")
+else:
+    st.write(">> Conclusão: NÃO há diferença significativa. A taxa de acidentes é parecida independente da faixa de renda.")
+
+# Visualização da ANOVA (Boxplot)
+fig, ax = plt.subplots(figsize=(8, 5))
+sns.boxplot(x='faixa_pib', y='taxa_acidentes_100k', data=df_analise, palette="Set2", ax=ax)
+plt.title('Distribuição de Acidentes por Faixa de Renda (ANOVA)')
+plt.ylabel('Acidentes por 100k hab.')
+plt.grid(True, linestyle=':', alpha=0.5)
+st.pyplot(fig)
+
+
+st.header("Clustering dos Municípios por PIB e Taxa de Acidentes")
+
+
+fig, ax = plt.subplots(figsize=(10, 6))
+sns.scatterplot(
+    x='vl_pib_per_capta',
+    y='taxa_acidentes_100k',
+    hue='cluster',
+    data=df_analise,
+    ax=ax,
+    palette='viridis',
+    s=150,
+    style='cluster'
+)
+
+# Adicionar nomes
+for i in range(df_analise.shape[0]):
+    plt.text(
+        df_analise.vl_pib_per_capta.iloc[i],
+        df_analise.taxa_acidentes_100k.iloc[i]+50,
+        df_analise.chave_municipio.iloc[i],
+        fontsize=8,
+        color='black'
+    )
+
+plt.title('Agrupamento de Municípios (Clusterização K-Means)')
+plt.xlabel('PIB per Capita')
+plt.ylabel('Taxa de Acidentes')
+plt.legend(title='Grupo Identificado')
+plt.grid(True, linestyle='--', alpha=0.5)
+st.pyplot(fig)
+
+# Interpretar os Clusters (Centróides)
+st.write("Perfil Médio dos Grupos Encontrados:")
+st.dataframe(df_analise.groupby('cluster')[['vl_pib_per_capta', 'taxa_acidentes_100k']].mean())

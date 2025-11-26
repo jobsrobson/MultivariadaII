@@ -331,3 +331,122 @@ if not MCA_SUCESSO:
     
     metodo_reducao = 'PCA'
     df_cluster = df_modelo.copy()
+
+st.header("Análise de Clusters dos Acidentes de Infraestrutura Viária", divider=True)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X_cluster)
+
+# Determinar número ótimo de clusters (k=2 a k=10)
+st.subheader("\nDeterminando número ótimo de clusters")
+
+k_max = min(10, len(df_cluster) // 10)  # Máximo: N/10
+k_range = range(2, k_max + 1)
+
+inertias = []
+silhouette_scores = []
+davies_bouldin_scores = []
+
+for k in k_range:
+    kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
+    labels = kmeans.fit_predict(X_scaled)
+    
+    inertias.append(kmeans.inertia_)
+    silhouette_scores.append(silhouette_score(X_scaled, labels))
+    davies_bouldin_scores.append(davies_bouldin_score(X_scaled, labels))
+
+# Visualizar métricas
+fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+
+axes[0].plot(k_range, inertias, 'bo-', linewidth=2, markersize=8)
+axes[0].set_xlabel('Número de Clusters (k)', fontsize=12)
+axes[0].set_ylabel('Inércia (WCSS)', fontsize=12)
+axes[0].set_title('Método do Cotovelo', fontsize=14, fontweight='bold')
+axes[0].grid(True, alpha=0.3)
+
+axes[1].plot(k_range, silhouette_scores, 'ro-', linewidth=2, markersize=8)
+axes[1].set_xlabel('Número de Clusters (k)', fontsize=12)
+axes[1].set_ylabel('Coeficiente de Silhueta', fontsize=12)
+axes[1].set_title('Análise de Silhueta', fontsize=14, fontweight='bold')
+axes[1].grid(True, alpha=0.3)
+
+axes[2].plot(k_range, davies_bouldin_scores, 'go-', linewidth=2, markersize=8)
+axes[2].set_xlabel('Número de Clusters (k)', fontsize=12)
+axes[2].set_ylabel('Davies-Bouldin Index', fontsize=12)
+axes[2].set_title('Davies-Bouldin (menor = melhor)', fontsize=14, fontweight='bold')
+axes[2].grid(True, alpha=0.3)
+
+plt.tight_layout()
+st.pyplot(fig)
+plt.close()
+
+# Selecionar k ótimo (maior silhueta)
+k_otimo = list(k_range)[np.argmax(silhouette_scores)]
+silhueta_otima = max(silhouette_scores)
+db_otimo = davies_bouldin_scores[np.argmax(silhouette_scores)]
+
+st.write(f"\nNúmero ótimo de clusters: k = {k_otimo}")
+st.write(f"Coeficiente de Silhueta: {silhueta_otima:.3f}")
+st.write(f"Davies-Bouldin Index: {db_otimo:.3f}")
+
+if silhueta_otima < 0.25:
+    st.write("⚠️ Silhueta muito baixa: estrutura fraca")
+elif silhueta_otima < 0.5:
+    st.write("✓ Silhueta razoável: estrutura moderada")
+else:
+    st.write("✓ Silhueta boa: estrutura bem definida")
+
+# Clustering final
+kmeans_final = KMeans(n_clusters=k_otimo, random_state=42, n_init=10)
+df_cluster['cluster'] = kmeans_final.fit_predict(X_scaled)
+
+# Tamanho dos clusters
+tamanhos = df_cluster['cluster'].value_counts().sort_index()
+st.subheader("\nTamanho dos clusters:")
+cluster_sizes = {}
+for cluster, n in tamanhos.items():
+    cluster_sizes[cluster] = n
+
+cluster_sizes_df = pd.DataFrame.from_dict(cluster_sizes, orient='index', columns=['Tamanho']).rename_axis('Cluster')
+
+cluster_sizes_df['Proporção (%)'] = (cluster_sizes_df['Tamanho'] / len(df_cluster) * 100).round(2).astype(str) + '%'
+
+st.dataframe(cluster_sizes_df)
+
+# Estatísticas numéricas
+cluster_stats_num = df_cluster.groupby('cluster').agg({
+    'total_vitimas': ['count', 'mean', 'std'],
+    'n_mortos': ['sum', 'mean'],
+    'n_feridos_graves': ['sum', 'mean'],
+    'n_feridos_leves': ['sum', 'mean'],
+    'indice_gravidade': ['mean', 'std']
+}).round(2)
+
+st.write("\nEstatísticas numéricas por cluster:")
+st.write(cluster_stats_num)
+
+# Perfil categórico
+
+for var in variaveis_categoricas:
+    st.write(f"\n{var}:")
+    perfil = pd.crosstab(df_cluster['cluster'], df_cluster[var], 
+                         normalize='index') * 100
+    st.write(perfil.round(1))
+
+# Visualizar clusters
+if X_cluster.shape[1] >= 2:
+    fig, ax = plt.subplots(figsize=(12, 8))
+    
+    for cluster in range(k_otimo):
+        mask = df_cluster['cluster'] == cluster
+        ax.scatter(X_cluster[mask, 0], X_cluster[mask, 1],
+                  label=f'Cluster {cluster} (n={mask.sum()})',
+                  s=80, alpha=0.6, edgecolors='black', linewidths=1)
+    
+    ax.set_xlabel(f'{metodo_reducao} - Dimensão 1', fontsize=12)
+    ax.set_ylabel(f'{metodo_reducao} - Dimensão 2', fontsize=12)
+    ax.set_title(f'Clusters (k={k_otimo})', fontsize=14, fontweight='bold')
+    ax.legend(loc='best', fontsize=10)
+    ax.grid(True, alpha=0.3)
+    plt.tight_layout()
+    st.pyplot(fig)
+    plt.close()

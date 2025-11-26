@@ -3,11 +3,13 @@ import streamlit as st
 
 # --- 1. CONFIGURAÇÃO DA PÁGINA ---
 
-st.set_page_config(
-    page_title="Transporte RIDE-DF",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+pg = st.navigation([
+    st.Page("pages/menu.py", title="Menu Principal", icon="🏠"),
+    st.Page("pages/acidentes_pib.py", title="Acidentes e o PIB dos municípios", icon="💰"),
+    st.Page("pages/acidentes_infra.py", title="Acidentes e infraestrutura viária", icon="🚧"),
+    st.Page("pages/acidentes_frota.py", title="Acidentes e frota de veículos", icon="🚗")
+])
+
 
 # --- 2. CONEXÃO COM BASE DE DADOS ---
 
@@ -20,5 +22,5 @@ def fetch_data(query, connection=conn):
     """Função para buscar dados do banco de dados."""
     return connection.query(query)
 
-st.header("Página inicial - Análise multivariada: Análise da área de Transportes na RIDE-DF")
 
+pg.run()
