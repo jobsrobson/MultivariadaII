@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+matplotlib
+plotly
+scikit-learn
+seaborn
+unidecode
+psycopg2-binary
+prince

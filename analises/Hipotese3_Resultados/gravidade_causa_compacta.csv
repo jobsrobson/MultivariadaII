@@ -1,0 +1,12 @@
+Causa,N_acidentes,Gravidade_média,p_MannWhitney
+Sinalização mal posicionada,4,21.0,0.26694697282249535
+Demais falhas na via,8,19.5,0.3749889379947343
+Iluminação deficiente,20,13.25,0.23712964550950044
+Falta de elemento de contenção que evite a saída do leito carroçável,11,8.727272727272727,0.35127731845642385
+Acumulo de água sobre o pavimento,18,5.166666666666667,0.026119352796440537
+Pista Escorregadia,25,4.48,0.008075340594811343
+Ausência de sinalização,5,4.2,0.6013260924277124
+Acesso irregular,15,4.0,0.19480051511783547
+Deficiência do Sistema de Iluminação/Sinalização,6,3.8333333333333335,0.2638333459923652
+Acumulo de areia ou detritos sobre o pavimento,6,3.1666666666666665,0.25104172102055444
+Acumulo de óleo sobre o pavimento,9,1.3333333333333333,0.0034702971644534125
