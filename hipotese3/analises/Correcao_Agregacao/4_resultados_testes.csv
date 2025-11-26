@@ -1,0 +1,6 @@
+Variável,Teste,Estatística,p-valor,Sig.
+Total de Vítimas,Kruskal-Wallis,12.532,0.1850,ns
+Número de Mortos,Kruskal-Wallis,99.377,0.0000,***
+Feridos Graves,Kruskal-Wallis,42.154,0.0000,***
+Feridos Leves,Kruskal-Wallis,20.087,0.0174,*
+Índice de Gravidade,Kruskal-Wallis,82.924,0.0000,***

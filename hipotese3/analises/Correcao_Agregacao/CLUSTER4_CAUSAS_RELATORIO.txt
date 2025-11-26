@@ -1,0 +1,89 @@
+================================================================================
+RELATÓRIO: CAUSAS DE INFRAESTRUTURA - CLUSTER 4 (CRÍTICO)
+================================================================================
+
+1. RESUMO
+--------------------------------------------------------------------------------
+Cluster 4: 20 acidentes (8.5% do total)
+Mortalidade: 0.73 mortos/acidente (6.9x acima da média)
+
+2. PRINCIPAIS CAUSAS DE INFRAESTRUTURA
+--------------------------------------------------------------------------------
+
+• Pista esburacada
+  - Cluster 4: 0 acidentes (0.0%)
+  - Over-representation: infx
+  - Significativo: Não (p=1.0000)
+
+• Falta de acostamento
+  - Cluster 4: 1 acidentes (5.0%)
+  - Over-representation: infx
+  - Significativo: Não (p=0.0847)
+
+• Sistema de drenagem ineficiente
+  - Cluster 4: 0 acidentes (0.0%)
+  - Over-representation: infx
+  - Significativo: Não (p=1.0000)
+
+• Restrição de visibilidade em curvas horizontais
+  - Cluster 4: 0 acidentes (0.0%)
+  - Over-representation: infx
+  - Significativo: Não (p=1.0000)
+
+• Restrição de visibilidade em curvas verticais
+  - Cluster 4: 1 acidentes (5.0%)
+  - Over-representation: 10.80x
+  - Significativo: Não (p=0.1626)
+
+• Iluminação deficiente
+  - Cluster 4: 3 acidentes (15.0%)
+  - Over-representation: 1.91x
+  - Significativo: Não (p=0.3898)
+
+• Demais falhas na via
+  - Cluster 4: 1 acidentes (5.0%)
+  - Over-representation: 1.54x
+  - Significativo: Não (p=0.5131)
+
+• Falta de elemento de contenção que evite a saída do leito carroçável
+  - Cluster 4: 1 acidentes (5.0%)
+  - Over-representation: 1.08x
+  - Significativo: Não (p=1.0000)
+
+• Pista Escorregadia
+  - Cluster 4: 2 acidentes (10.0%)
+  - Over-representation: 0.94x
+  - Significativo: Não (p=1.0000)
+
+• Acesso irregular
+  - Cluster 4: 0 acidentes (0.0%)
+  - Over-representation: 0.00x
+  - Significativo: Não (p=0.6231)
+
+3. RECOMENDAÇÕES DE INTERVENÇÃO
+--------------------------------------------------------------------------------
+
+Priorizar ações nas seguintes causas identificadas:
+
+→ Pista esburacada:
+   - Avaliação técnica específica
+   Impacto esperado: reduzir 0 acidentes críticos
+
+→ Falta de acostamento:
+   - Construir/reformar acostamento
+   - Demarcar com pintura refletiva
+   Impacto esperado: reduzir 1 acidentes críticos
+
+→ Sistema de drenagem ineficiente:
+   - Modernizar sistema de drenagem
+   - Limpeza regular de bueiros
+   Impacto esperado: reduzir 0 acidentes críticos
+
+→ Restrição de visibilidade em curvas horizontais:
+   - Avaliação técnica específica
+   Impacto esperado: reduzir 0 acidentes críticos
+
+→ Restrição de visibilidade em curvas verticais:
+   - Avaliação técnica específica
+   Impacto esperado: reduzir 1 acidentes críticos
+

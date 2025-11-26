@@ -1,0 +1,25 @@
+================================================================================
+SUMÁRIO DA ANÁLISE MCA + CLUSTER
+================================================================================
+
+Total de acidentes analisados: 236
+Número de clusters identificados: 3
+Dimensões MCA usadas: 1
+Variância explicada: 0.03%
+
+Distribuição dos clusters:
+cluster
+0    89
+1    68
+2    79
+
+Associação variáveis-clusters:
+              variable       chi2      p_value  cramers_v
+              uso_solo 119.293603 1.246589e-26   0.710972
+           tracado_via 166.520815 4.429871e-07   0.593968
+         tipo_acidente 121.206806 6.401138e-13   0.506749
+        causa_acidente  90.519030 3.558843e-06   0.437924
+            tipo_pista  78.204885 4.180188e-16   0.407048
+classificacao_acidente  34.972679 4.705764e-07   0.272203
+condicao_metereologica  24.242321 4.282693e-02   0.226629
+              fase_dia  17.916532 6.444206e-03   0.194830

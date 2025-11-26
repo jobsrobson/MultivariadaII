@@ -1,0 +1,6 @@
+Variável,p-valor,p-ajustado,Significativo
+Total de Vítimas,0.1850,0.9250,Não
+Número de Mortos,0.0000,0.0000,Sim
+Feridos Graves,0.0000,0.0000,Sim
+Feridos Leves,0.0174,0.0870,Não
+Índice de Gravidade,0.0000,0.0000,Sim

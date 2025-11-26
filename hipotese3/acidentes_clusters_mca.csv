@@ -1,0 +1,237 @@
+id,causa_acidente,classificacao_acidente,tipo_pista,tracado_via,fase_dia,condicao_metereologica,tipo_acidente,uso_solo,mortos,feridos_graves,feridos_leves,cluster
+572018,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Plena Noite,Chuva,Saída de leito carroçável,Não  ,0,0,0,2
+572065,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Chuva,Queda de ocupante de veículo,Sim  ,0,0,2,1
+572569,Pista Escorregadia,Com Vítimas Feridas,Dupla,Curva,Pleno dia,Chuva,Capotamento,Não  ,0,0,9,0
+572657,Iluminação deficiente,Com Vítimas Fatais,Simples,Reta,Plena Noite,Chuva,Saída de leito carroçável,Não  ,3,0,3,0
+572668,Demais falhas na via,Com Vítimas Feridas,Simples,Interseção de Vias;Declive,Plena Noite,Nevoeiro/Neblina,Capotamento,Não  ,0,0,2,0
+572830,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Simples,Reta,Plena Noite,Nublado,Tombamento,Não  ,0,0,6,0
+572994,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Declive,Anoitecer,Chuva,Tombamento,Não  ,0,0,9,2
+573228,Acumulo de água sobre o pavimento,Com Vítimas Fatais,Simples,Curva,Pleno dia,Nublado,Colisão frontal,Não  ,1,2,1,0
+573285,Iluminação deficiente,Sem Vítimas,Dupla,Aclive;Ponte;Reta,Plena Noite,Nublado,Atropelamento de Animal,Sim  ,0,0,0,2
+573297,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Queda de ocupante de veículo,Sim  ,0,0,1,1
+573407,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Aclive,Pleno dia,Chuva,Capotamento,Não  ,0,0,2,0
+573425,Acumulo de água sobre o pavimento,Sem Vítimas,Dupla,Reta,Pleno dia,Chuva,Colisão com objeto,Sim  ,0,0,0,1
+573852,Pista esburacada,Com Vítimas Feridas,Simples,Reta;Aclive,Plena Noite,Nublado,Saída de leito carroçável,Não  ,0,0,2,0
+573857,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Nublado,Atropelamento de Pedestre,Sim  ,0,0,1,2
+574527,Iluminação deficiente,Sem Vítimas,Dupla,Curva,Plena Noite,Céu Claro,Capotamento,Não  ,0,0,0,0
+574553,Acesso irregular,Com Vítimas Feridas,Simples,Reta,Plena Noite,Céu Claro,Colisão lateral mesmo sentido,Não  ,0,0,1,2
+574722,Pista Escorregadia,Sem Vítimas,Simples,Aclive;Reta,Anoitecer,Garoa/Chuvisco,Saída de leito carroçável,Sim  ,0,0,0,2
+575114,Falta de acostamento,Com Vítimas Fatais,Simples,Reta;Declive,Pleno dia,Céu Claro,Saída de leito carroçável,Não  ,6,0,0,0
+575264,Acumulo de areia ou detritos sobre o pavimento,Com Vítimas Feridas,Dupla,Reta;Em Obras,Pleno dia,Céu Claro,Colisão transversal,Sim  ,0,0,1,1
+575898,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Curva;Declive,Pleno dia,Céu Claro,Capotamento,Sim  ,0,1,0,0
+576998,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Curva,Pleno dia,Chuva,Capotamento,Sim  ,0,0,6,2
+577517,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Chuva,Colisão com objeto,Sim  ,0,0,2,1
+577625,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Curva,Anoitecer,Nublado,Colisão com objeto,Não  ,0,0,2,0
+577828,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Queda de ocupante de veículo,Não  ,0,0,2,2
+578298,Acumulo de água sobre o pavimento,Sem Vítimas,Múltipla,Declive;Ponte,Pleno dia,Chuva,Colisão com objeto,Sim  ,0,0,0,1
+578410,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Colisão transversal,Sim  ,0,0,1,1
+579852,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Nublado,Queda de ocupante de veículo,Sim  ,0,1,0,1
+580480,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Pleno dia,Chuva,Saída de leito carroçável,Não  ,0,0,0,2
+580641,Pista Escorregadia,Com Vítimas Fatais,Dupla,Aclive;Reta,Plena Noite,Chuva,Colisão frontal,Não  ,1,1,2,0
+580648,Pista Escorregadia,Com Vítimas Feridas,Dupla,Interseção de Vias;Ponte;Reta,Plena Noite,Chuva,Queda de ocupante de veículo,Sim  ,0,0,8,1
+580722,Demais falhas na via,Sem Vítimas,Simples,Interseção de Vias;Reta,Pleno dia,Chuva,Eventos atípicos,Sim  ,0,0,0,2
+580994,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Atropelamento de Pedestre,Sim  ,0,1,0,2
+581510,Restrição de visibilidade em curvas verticais,Com Vítimas Feridas,Simples,Declive;Curva,Pleno dia,Céu Claro,Colisão traseira,Sim  ,0,0,3,0
+581709,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Derramamento de carga,Sim  ,0,0,2,2
+581936,Acesso irregular,Com Vítimas Feridas,Dupla,Reta;Interseção de Vias,Plena Noite,Chuva,Colisão com objeto,Sim  ,0,8,0,1
+582001,Acesso irregular,Sem Vítimas,Múltipla,Interseção de Vias;Reta,Pleno dia,Nublado,Colisão transversal,Sim  ,0,0,0,1
+582216,Deficiência do Sistema de Iluminação/Sinalização,Sem Vítimas,Dupla,Reta,Pleno dia,Garoa/Chuvisco,Tombamento,Sim  ,0,0,0,1
+582268,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Pleno dia,Chuva,Colisão com objeto,Não  ,0,0,0,1
+582269,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Pleno dia,Chuva,Colisão com objeto,Não  ,0,0,0,1
+582856,Iluminação deficiente,Com Vítimas Feridas,Simples,Interseção de Vias;Reta,Plena Noite,Nublado,Atropelamento de Pedestre,Sim  ,0,1,0,2
+584282,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Anoitecer,Céu Claro,Colisão transversal,Sim  ,0,0,1,1
+584475,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Declive;Reta,Pleno dia,Chuva,Saída de leito carroçável,Sim  ,0,0,2,2
+584546,Iluminação deficiente,Sem Vítimas,Simples,Reta;Rotatória;Em Obras,Plena Noite,Céu Claro,Colisão transversal,Sim  ,0,0,0,2
+585780,Deficiência do Sistema de Iluminação/Sinalização,Sem Vítimas,Simples,Aclive;Curva,Amanhecer,Céu Claro,Incêndio,Não  ,0,0,0,0
+586696,Iluminação deficiente,Com Vítimas Feridas,Dupla,Declive;Reta,Amanhecer,Nublado,Queda de ocupante de veículo,Não  ,0,4,0,2
+586759,Sistema de drenagem ineficiente,Com Vítimas Feridas,Simples,Curva,Anoitecer,Chuva,Saída de leito carroçável,Não  ,0,0,2,0
+586763,Acesso irregular,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Saída de leito carroçável,Não  ,0,2,4,0
+586905,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Reta,Pleno dia,Chuva,Colisão frontal,Não  ,0,0,1,0
+586942,Declive acentuado,Com Vítimas Feridas,Dupla,Reta;Declive,Pleno dia,Nublado,Queda de ocupante de veículo,Sim  ,0,0,3,2
+587080,Acumulo de água sobre o pavimento,Sem Vítimas,Dupla,Reta;Declive,Plena Noite,Chuva,Saída de leito carroçável,Sim  ,0,0,0,2
+587416,Curva acentuada,Sem Vítimas,Dupla,Em Obras;Interseção de Vias;Desvio Temporário,Pleno dia,Céu Claro,Capotamento,Sim  ,0,0,0,2
+587490,Demais falhas na via,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,4,0,2
+587840,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Colisão com objeto,Não  ,0,4,2,2
+587896,Acumulo de óleo sobre o pavimento,Sem Vítimas,Dupla,Reta,Pleno dia,Céu Claro,Capotamento,Sim  ,0,0,0,1
+589300,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta;Ponte;Declive,Plena Noite,Chuva,Engavetamento,Sim  ,0,0,12,1
+589941,Sinalização mal posicionada,Com Vítimas Feridas,Dupla,Desvio Temporário,Plena Noite,Chuva,Tombamento,Não  ,0,2,2,2
+590111,Declive acentuado,Com Vítimas Feridas,Simples,Curva;Declive,Pleno dia,Nublado,Tombamento,Não  ,0,4,4,0
+590167,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Chuva,Queda de ocupante de veículo,Sim  ,0,0,2,1
+590782,Acumulo de areia ou detritos sobre o pavimento,Com Vítimas Feridas,Dupla,Aclive,Plena Noite,Chuva,Colisão traseira,Não  ,0,0,1,2
+590820,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Nublado,Atropelamento de Pedestre,Sim  ,0,1,0,2
+590860,Restrição de visibilidade em curvas verticais,Com Vítimas Feridas,Simples,Curva;Declive,Plena Noite,Céu Claro,Colisão lateral sentido oposto,Não  ,0,0,4,0
+591330,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Múltipla,Reta,Pleno dia,Chuva,Capotamento,Sim  ,0,0,4,2
+591461,Acesso irregular,Com Vítimas Feridas,Múltipla,Reta,Plena Noite,Céu Claro,Tombamento,Não  ,0,0,6,2
+591633,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Chuva,Colisão traseira,Sim  ,0,0,1,2
+591739,Sistema de drenagem ineficiente,Sem Vítimas,Dupla,Declive;Reta,Pleno dia,Garoa/Chuvisco,Colisão lateral mesmo sentido,Sim  ,0,0,0,1
+591828,Iluminação deficiente,Com Vítimas Feridas,Dupla,Aclive;Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Não  ,0,6,0,0
+592313,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Ignorado,Queda de ocupante de veículo,Sim  ,0,0,6,2
+592939,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Reta,Plena Noite,Nublado,Queda de ocupante de veículo,Sim  ,0,0,1,2
+593098,Pista Escorregadia,Sem Vítimas,Dupla,Curva;Declive;Retorno Regulamentado,Pleno dia,Chuva,Colisão com objeto,Sim  ,0,0,0,1
+594167,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Declive;Curva,Pleno dia,Céu Claro,Capotamento,Não  ,0,0,4,0
+594304,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,3,0,1
+594980,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Simples,Curva,Pleno dia,Céu Claro,Tombamento,Não  ,0,0,3,0
+595656,Acesso irregular,Com Vítimas Feridas,Dupla,Aclive;Retorno Regulamentado,Pleno dia,Céu Claro,Queda de ocupante de veículo,Não  ,0,0,2,1
+595763,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,4,1
+595859,Ausência de sinalização,Com Vítimas Feridas,Dupla,Curva,Pleno dia,Nublado,Queda de ocupante de veículo,Sim  ,0,2,0,2
+595885,Desvio temporário,Com Vítimas Feridas,Simples,Reta;Aclive,Pleno dia,Céu Claro,Colisão lateral sentido oposto,Não  ,0,0,2,0
+595936,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta;Declive,Plena Noite,Chuva,Tombamento,Sim  ,0,0,27,2
+596960,Acesso irregular,Com Vítimas Feridas,Dupla,Retorno Regulamentado;Reta,Pleno dia,Sol,Queda de ocupante de veículo,Sim  ,0,3,3,1
+597079,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Declive;Curva,Plena Noite,Chuva,Saída de leito carroçável,Não  ,0,0,1,0
+599147,Demais falhas na via,Com Vítimas Fatais,Dupla,Reta,Plena Noite,Céu Claro,Capotamento,Não  ,4,0,8,0
+599742,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Não  ,0,0,1,2
+599835,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Capotamento,Sim  ,0,4,0,2
+600094,Acesso irregular,Com Vítimas Feridas,Dupla,Reta;Declive,Anoitecer,Céu Claro,Colisão transversal,Sim  ,0,0,2,1
+600095,Ausência de sinalização,Com Vítimas Fatais,Dupla,Reta;Aclive,Plena Noite,Ignorado,Saída de leito carroçável,Não  ,5,0,0,0
+600381,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Curva;Aclive,Plena Noite,Céu Claro,Saída de leito carroçável,Não  ,0,0,1,0
+602067,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,2,2
+602097,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Fatais,Dupla,Reta;Declive,Plena Noite,Ignorado,Capotamento,Não  ,2,0,0,0
+602168,Sinalização mal posicionada,Com Vítimas Feridas,Dupla,Declive;Ponte,Pleno dia,Céu Claro,Engavetamento,Não  ,0,0,36,1
+602220,Ausência de sinalização,Com Vítimas Feridas,Simples,Reta;Declive,Pleno dia,Céu Claro,Colisão traseira,Sim  ,0,0,1,2
+602293,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Simples,Reta;Declive,Plena Noite,Céu Claro,Capotamento,Não  ,0,0,6,0
+602313,Ausência de sinalização,Com Vítimas Fatais,Simples,Curva;Aclive,Plena Noite,Céu Claro,Saída de leito carroçável,Sim  ,2,0,0,0
+602802,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Simples,Curva;Declive,Plena Noite,Vento,Tombamento,Não  ,0,2,0,0
+603088,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,2,1
+603591,Acesso irregular,Com Vítimas Feridas,Simples,Reta;Aclive,Pleno dia,Céu Claro,Colisão frontal,Não  ,0,0,1,0
+603729,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta;Declive,Pleno dia,Céu Claro,Saída de leito carroçável,Sim  ,0,0,2,2
+603946,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Plena Noite,Céu Claro,Colisão traseira,Não  ,0,0,0,2
+604626,Iluminação deficiente,Com Vítimas Feridas,Simples,Curva,Amanhecer,Ignorado,Saída de leito carroçável,Não  ,0,0,2,0
+604751,Ausência de sinalização,Com Vítimas Feridas,Dupla,Reta;Retorno Regulamentado,Anoitecer,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,3,1
+605069,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Declive;Reta,Pleno dia,Ignorado,Saída de leito carroçável,Não  ,0,0,2,0
+605266,Afundamento ou ondulação no pavimento,Com Vítimas Feridas,Simples,Em Obras;Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Não  ,0,0,2,2
+607115,Ausência de sinalização,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,6,1
+607381,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta;Aclive,Pleno dia,Céu Claro,Colisão com objeto,Não  ,0,0,3,0
+607856,Sinalização mal posicionada,Com Vítimas Feridas,Múltipla,Reta,Pleno dia,Céu Claro,Colisão traseira,Sim  ,0,0,1,1
+607875,Demais falhas na via,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Colisão traseira,Não  ,0,0,2,0
+607932,Declive acentuado,Com Vítimas Feridas,Dupla,Reta;Declive,Pleno dia,Céu Claro,Saída de leito carroçável,Não  ,0,0,1,0
+608092,Curva acentuada,Com Vítimas Feridas,Simples,Curva,Amanhecer,Céu Claro,Saída de leito carroçável,Não  ,0,0,1,0
+608108,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Sol,Queda de ocupante de veículo,Sim  ,0,0,3,1
+608336,Demais falhas na via,Com Vítimas Feridas,Simples,Interseção de Vias,Plena Noite,Céu Claro,Colisão com objeto,Não  ,0,0,4,0
+608495,Declive acentuado,Com Vítimas Fatais,Simples,Curva;Declive,Amanhecer,Céu Claro,Capotamento,Não  ,2,0,0,0
+608795,Curva acentuada,Com Vítimas Feridas,Simples,Curva;Interseção de Vias,Pleno dia,Céu Claro,Tombamento,Não  ,0,0,2,0
+608882,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Colisão traseira,Não  ,0,0,2,2
+609677,Iluminação deficiente,Com Vítimas Fatais,Simples,Reta,Amanhecer,Céu Claro,Queda de ocupante de veículo,Sim  ,2,0,0,0
+609827,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Simples,Reta,Plena Noite,Céu Claro,Saída de leito carroçável,Não  ,0,2,0,0
+610121,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Simples,Retorno Regulamentado;Interseção de Vias,Amanhecer,Céu Claro,Capotamento,Não  ,0,0,6,0
+611390,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Simples,Reta;Declive,Plena Noite,Céu Claro,Capotamento,Não  ,0,2,0,0
+612150,Acesso irregular,Com Vítimas Fatais,Simples,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,2,0,0,2
+612955,Afundamento ou ondulação no pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,1,1
+613407,Sinalização mal posicionada,Sem Vítimas,Dupla,Rotatória,Amanhecer,Sol,Colisão transversal,Sim  ,0,0,0,1
+613988,Iluminação deficiente,Com Vítimas Feridas,Simples,Reta,Plena Noite,Céu Claro,Capotamento,Não  ,0,0,2,0
+614143,Falta de acostamento,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Colisão traseira,Sim  ,0,3,6,2
+614633,Sinalização mal posicionada,Sem Vítimas,Simples,Reta,Pleno dia,Céu Claro,Colisão traseira,Sim  ,0,0,0,1
+614934,Iluminação deficiente,Com Vítimas Feridas,Dupla,Declive;Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,4,2
+615372,Demais falhas na via,Com Vítimas Feridas,Simples,Reta;Declive;Em Obras,Plena Noite,Céu Claro,Capotamento,Não  ,0,0,4,0
+615650,Acesso irregular,Com Vítimas Feridas,Simples,Reta;Interseção de Vias,Pleno dia,Céu Claro,Colisão transversal,Sim  ,0,0,1,1
+615682,Demais falhas na via,Com Vítimas Feridas,Dupla,Ponte;Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,2,1
+615858,Curva acentuada,Sem Vítimas,Dupla,Aclive;Curva,Amanhecer,Ignorado,Saída de leito carroçável,Não  ,0,0,0,0
+617038,Curva acentuada,Com Vítimas Feridas,Dupla,Aclive;Curva,Pleno dia,Céu Claro,Saída de leito carroçável,Sim  ,0,3,0,0
+617039,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta;Declive,Pleno dia,Céu Claro,Capotamento,Não  ,0,0,2,0
+617461,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Curva;Aclive,Amanhecer,Céu Claro,Queda de ocupante de veículo,Não  ,0,0,1,2
+617811,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Amanhecer,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,1,1
+618022,Acesso irregular,Com Vítimas Feridas,Simples,Reta;Declive,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,2,0,2
+618696,Iluminação deficiente,Com Vítimas Fatais,Simples,Reta,Plena Noite,Céu Claro,Atropelamento de Pedestre,Não  ,2,0,0,0
+618844,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Fatais,Múltipla,Declive;Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,4,0,4,2
+620272,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta;Declive,Pleno dia,Céu Claro,Colisão com objeto,Sim  ,0,3,0,2
+620603,Restrição de visibilidade em curvas verticais,Com Vítimas Fatais,Simples,Curva,Plena Noite,Céu Claro,Saída de leito carroçável,Não  ,4,0,16,0
+620875,Pista Escorregadia,Com Vítimas Feridas,Dupla,Rotatória,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,2,0,1
+621146,Acumulo de areia ou detritos sobre o pavimento,Com Vítimas Feridas,Dupla,Reta;Em Obras,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,2,0,1
+621483,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Capotamento,Sim  ,0,0,4,2
+621761,Acostamento em desnível,Com Vítimas Feridas,Dupla,Em Obras;Declive,Pleno dia,Céu Claro,Tombamento,Sim  ,0,0,4,2
+621780,Ausência de sinalização,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,3,1
+621804,Falta de elemento de contenção que evite a saída do leito carroçável,Sem Vítimas,Dupla,Reta,Pleno dia,Céu Claro,Colisão com objeto,Não  ,0,0,0,2
+621874,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Saída de leito carroçável,Sim  ,0,0,2,2
+622015,Acostamento em desnível,Com Vítimas Feridas,Dupla,Em Obras;Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Não  ,0,2,0,2
+622056,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,1,0,1
+622418,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Capotamento,Sim  ,0,0,8,2
+623631,Ausência de sinalização,Sem Vítimas,Simples,Reta,Plena Noite,Céu Claro,Saída de leito carroçável,Não  ,0,0,0,0
+624015,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Saída de leito carroçável,Sim  ,0,0,4,2
+625936,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Múltipla,Reta,Pleno dia,Céu Claro,Tombamento,Não  ,0,0,2,2
+626566,Deficiência do Sistema de Iluminação/Sinalização,Sem Vítimas,Dupla,Interseção de Vias,Plena Noite,Céu Claro,Colisão lateral mesmo sentido,Sim  ,0,0,0,1
+627230,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Atropelamento de Pedestre,Sim  ,0,1,0,2
+627245,Acostamento em desnível,Com Vítimas Feridas,Simples,Reta,Plena Noite,Céu Claro,Colisão frontal,Não  ,0,1,1,0
+628003,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,0,4,1
+628742,Declive acentuado,Com Vítimas Feridas,Dupla,Reta;Desvio Temporário;Declive,Pleno dia,Céu Claro,Engavetamento,Sim  ,0,0,2,1
+628922,Ausência de sinalização,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,2,0,1
+629818,Ausência de sinalização,Com Vítimas Fatais,Simples,Em Obras;Declive;Curva,Pleno dia,Céu Claro,Derramamento de carga,Não  ,10,0,5,0
+631279,Acesso irregular,Com Vítimas Feridas,Simples,Aclive;Reta,Plena Noite,Chuva,Eventos atípicos,Não  ,0,0,1,0
+631725,Iluminação deficiente,Com Vítimas Fatais,Simples,Aclive,Plena Noite,Céu Claro,Atropelamento de Animal,Não  ,1,0,0,0
+632173,Iluminação deficiente,Com Vítimas Feridas,Simples,Reta;Declive,Plena Noite,Céu Claro,Saída de leito carroçável,Não  ,0,0,2,0
+632203,Ausência de sinalização,Sem Vítimas,Dupla,Reta,Pleno dia,Céu Claro,Colisão lateral mesmo sentido,Sim  ,0,0,0,1
+632520,Acumulo de areia ou detritos sobre o pavimento,Com Vítimas Feridas,Dupla,Interseção de Vias;Retorno Regulamentado,Pleno dia,Céu Claro,Queda de ocupante de veículo,Sim  ,0,2,0,1
+632993,Curva acentuada,Com Vítimas Feridas,Simples,Curva,Pleno dia,Céu Claro,Tombamento,Não  ,0,0,2,0
+633322,Demais falhas na via,Com Vítimas Feridas,Múltipla,Reta;Declive,Anoitecer,Céu Claro,Colisão traseira,Não  ,0,0,4,0
+633600,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Amanhecer,Chuva,Colisão com objeto,Não  ,0,0,2,2
+633606,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Saída de leito carroçável,Sim  ,0,0,1,2
+633689,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta;Viaduto,Pleno dia,Garoa/Chuvisco,Colisão traseira,Sim  ,0,0,10,1
+634258,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Simples,Reta,Plena Noite,Nublado,Colisão transversal,Não  ,0,0,6,0
+634435,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Chuva,Capotamento,Não  ,0,0,2,2
+634447,Pista Escorregadia,Com Vítimas Feridas,Múltipla,Declive,Pleno dia,Chuva,Atropelamento de Pedestre,Não  ,0,2,2,2
+634657,Acesso irregular,Sem Vítimas,Dupla,Retorno Regulamentado,Pleno dia,Céu Claro,Colisão lateral sentido oposto,Sim  ,0,0,0,2
+634983,Iluminação deficiente,Com Vítimas Feridas,Simples,Rotatória,Plena Noite,Garoa/Chuvisco,Saída de leito carroçável,Não  ,0,0,2,0
+635106,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Curva,Pleno dia,Chuva,Colisão com objeto,Sim  ,0,0,1,1
+635312,Pista Escorregadia,Sem Vítimas,Dupla,Reta;Retorno Regulamentado,Pleno dia,Chuva,Colisão traseira,Sim  ,0,0,0,1
+635316,Acumulo de óleo sobre o pavimento,Sem Vítimas,Dupla,Reta;Declive,Pleno dia,Chuva,Colisão com objeto,Sim  ,0,0,0,1
+635332,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Pleno dia,Garoa/Chuvisco,Saída de leito carroçável,Sim  ,0,0,0,1
+635336,Acumulo de água sobre o pavimento,Sem Vítimas,Dupla,Curva,Anoitecer,Chuva,Colisão com objeto,Não  ,0,0,0,2
+635531,Sinalização mal posicionada,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Colisão traseira,Sim  ,0,0,2,1
+635627,Acesso irregular,Com Vítimas Feridas,Simples,Reta,Amanhecer,Céu Claro,Saída de leito carroçável,Não  ,0,4,0,0
+636566,Iluminação deficiente,Com Vítimas Fatais,Dupla,Reta,Plena Noite,Chuva,Queda de ocupante de veículo,Não  ,3,0,0,0
+636751,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Reta;Aclive,Plena Noite,Chuva,Capotamento,Não  ,0,0,6,0
+636768,Pista Escorregadia,Com Vítimas Feridas,Dupla,Curva;Aclive,Pleno dia,Nublado,Capotamento,Não  ,0,0,2,0
+637264,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Dupla,Declive,Pleno dia,Chuva,Saída de leito carroçável,Sim  ,0,12,4,2
+637528,Ausência de sinalização,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Colisão lateral sentido oposto,Não  ,0,1,1,0
+637552,Pista Escorregadia,Sem Vítimas,Dupla,Reta;Declive,Pleno dia,Chuva,Tombamento,Sim  ,0,0,0,1
+638104,Pista Escorregadia,Com Vítimas Feridas,Simples,Reta;Declive,Plena Noite,Chuva,Capotamento,Sim  ,0,0,2,0
+638598,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Colisão transversal,Sim  ,0,0,1,1
+638983,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Dupla,Reta,Amanhecer,Nublado,Colisão com objeto,Sim  ,0,0,1,2
+639160,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Simples,Declive;Reta,Pleno dia,Chuva,Colisão com objeto,Não  ,0,0,1,2
+639541,Curva acentuada,Com Vítimas Feridas,Dupla,Curva,Pleno dia,Céu Claro,Tombamento,Não  ,0,0,8,0
+639680,Iluminação deficiente,Com Vítimas Feridas,Simples,Declive;Reta,Plena Noite,Chuva,Capotamento,Não  ,0,0,6,0
+639797,Demais falhas na via,Com Vítimas Fatais,Dupla,Rotatória,Anoitecer,Nublado,Atropelamento de Pedestre,Não  ,4,4,0,0
+639843,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Nublado,Colisão traseira,Sim  ,0,0,1,1
+640057,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta;Aclive,Plena Noite,Chuva,Tombamento,Não  ,0,0,3,0
+640059,Ausência de sinalização,Com Vítimas Feridas,Dupla,Em Obras,Plena Noite,Nublado,Tombamento,Não  ,0,0,3,0
+640212,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Nublado,Colisão com objeto,Sim  ,0,0,1,1
+641195,Declive acentuado,Com Vítimas Feridas,Dupla,Reta;Declive,Anoitecer,Nublado,Queda de ocupante de veículo,Não  ,0,0,3,2
+641214,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Garoa/Chuvisco,Colisão lateral mesmo sentido,Sim  ,0,0,1,1
+641615,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta;Interseção de Vias;Em Obras;Declive,Plena Noite,Chuva,Saída de leito carroçável,Sim  ,0,0,4,2
+642313,Pista Escorregadia,Com Vítimas Feridas,Simples,Reta;Declive,Pleno dia,Garoa/Chuvisco,Colisão lateral sentido oposto,Não  ,0,0,1,0
+642359,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Chuva,Colisão com objeto,Sim  ,0,0,1,1
+643404,Acumulo de areia ou detritos sobre o pavimento,Com Vítimas Feridas,Dupla,Interseção de Vias;Reta,Amanhecer,Nublado,Colisão lateral mesmo sentido,Sim  ,0,0,2,1
+643409,Acumulo de areia ou detritos sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Tombamento,Sim  ,0,0,2,1
+643509,Curva acentuada,Com Vítimas Feridas,Dupla,Curva,Pleno dia,Chuva,Tombamento,Sim  ,0,0,9,2
+643521,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Queda de ocupante de veículo,Sim  ,0,0,2,1
+643599,Iluminação deficiente,Com Vítimas Feridas,Simples,Reta,Plena Noite,Nublado,Incêndio,Não  ,0,4,0,0
+643755,Acumulo de óleo sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Nublado,Saída de leito carroçável,Não  ,0,0,4,2
+644052,Pista Escorregadia,Com Vítimas Fatais,Dupla,Curva,Plena Noite,Nublado,Saída de leito carroçável,Não  ,3,0,0,0
+644057,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Chuva,Saída de leito carroçável,Sim  ,0,0,1,2
+644067,Acesso irregular,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Nublado,Capotamento,Sim  ,0,0,6,2
+644853,Iluminação deficiente,Com Vítimas Fatais,Dupla,Reta;Aclive,Plena Noite,Nublado,Colisão frontal,Não  ,4,0,0,0
+645045,Curva acentuada,Com Vítimas Feridas,Simples,Curva,Pleno dia,Chuva,Colisão transversal,Não  ,0,2,0,0
+645452,Acesso irregular,Com Vítimas Feridas,Dupla,Declive;Reta;Retorno Regulamentado,Pleno dia,Céu Claro,Queda de ocupante de veículo,Não  ,0,0,2,1
+645708,Declive acentuado,Com Vítimas Fatais,Dupla,Reta;Aclive,Pleno dia,Chuva,Saída de leito carroçável,Não  ,8,4,0,0
+645724,Pista Escorregadia,Com Vítimas Fatais,Simples,Declive;Reta,Pleno dia,Chuva,Colisão frontal,Não  ,2,0,0,0
+646749,Sinalização mal posicionada,Com Vítimas Fatais,Simples,Em Obras;Reta,Pleno dia,Céu Claro,Atropelamento de Pedestre,Sim  ,4,0,0,2
+647110,Curva acentuada,Sem Vítimas,Simples,Declive;Reta,Pleno dia,Chuva,Saída de leito carroçável,Não  ,0,0,0,0
+647381,Deficiência do Sistema de Iluminação/Sinalização,Sem Vítimas,Simples,Reta,Plena Noite,Céu Claro,Colisão traseira,Não  ,0,0,0,0
+647492,Falta de elemento de contenção que evite a saída do leito carroçável,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Capotamento,Não  ,0,2,2,0
+647790,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,3,3,2
+647902,Acumulo de água sobre o pavimento,Sem Vítimas,Simples,Reta,Pleno dia,Chuva,Capotamento,Não  ,0,0,0,0
+647930,Demais falhas na via,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Céu Claro,Saída de leito carroçável,Sim  ,0,0,4,2
+647931,Pista Escorregadia,Com Vítimas Feridas,Dupla,Declive;Retorno Regulamentado;Reta,Pleno dia,Chuva,Colisão com objeto,Sim  ,0,0,2,1
+648242,Iluminação deficiente,Com Vítimas Feridas,Dupla,Reta;Aclive,Anoitecer,Céu Claro,Atropelamento de Pedestre,Não  ,0,0,2,0
+648606,Acumulo de óleo sobre o pavimento,Sem Vítimas,Dupla,Declive;Reta,Plena Noite,Chuva,Colisão com objeto,Sim  ,0,0,0,1
+648676,Pista Escorregadia,Sem Vítimas,Dupla,Reta,Pleno dia,Céu Claro,Colisão com objeto,Sim  ,0,0,0,1
+648773,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Declive;Reta,Pleno dia,Chuva,Saída de leito carroçável,Não  ,0,0,4,2
+649039,Iluminação deficiente,Com Vítimas Feridas,Simples,Reta,Plena Noite,Céu Claro,Colisão transversal,Sim  ,0,0,2,2
+649185,Acumulo de água sobre o pavimento,Sem Vítimas,Dupla,Reta;Aclive,Pleno dia,Chuva,Capotamento,Não  ,0,0,0,0
+649254,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Curva,Plena Noite,Nevoeiro/Neblina,Colisão lateral sentido oposto,Não  ,0,0,1,0
+649606,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Declive,Pleno dia,Chuva,Capotamento,Não  ,0,0,2,2
+649864,Acumulo de água sobre o pavimento,Sem Vítimas,Dupla,Declive;Reta;Retorno Regulamentado,Pleno dia,Chuva,Tombamento,Sim  ,0,0,0,1
+649901,Pista Escorregadia,Com Vítimas Feridas,Dupla,Reta,Pleno dia,Chuva,Colisão traseira,Sim  ,0,0,2,1
+650718,Acesso irregular,Com Vítimas Feridas,Simples,Reta,Pleno dia,Céu Claro,Queda de ocupante de veículo,Não  ,0,2,0,2
+650758,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Dupla,Reta;Declive,Pleno dia,Chuva,Saída de leito carroçável,Sim  ,0,0,2,2
+651102,Deficiência do Sistema de Iluminação/Sinalização,Com Vítimas Feridas,Simples,Curva,Plena Noite,Chuva,Queda de ocupante de veículo,Sim  ,0,2,0,0
+651888,Acumulo de água sobre o pavimento,Com Vítimas Feridas,Simples,Curva,Pleno dia,Chuva,Capotamento,Não  ,0,0,1,0
+656770,Iluminação deficiente,Com Vítimas Feridas,Simples,Reta,Plena Noite,Céu Claro,Queda de ocupante de veículo,Sim  ,0,2,0,2

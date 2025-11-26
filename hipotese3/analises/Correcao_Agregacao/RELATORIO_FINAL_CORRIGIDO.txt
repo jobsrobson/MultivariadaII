@@ -1,0 +1,66 @@
+================================================================================
+RELATÓRIO DE ANÁLISE MULTIVARIADA (VERSÃO CORRIGIDA)
+Acidentes de Infraestrutura - PRF 2024 - RIDE-DF
+CORREÇÃO: Vítimas = apenas mortos + feridos (exclui ilesos)
+================================================================================
+
+1. DADOS
+--------------------------------------------------------------------------------
+Total de envolvidos no banco: 18,652
+Total de vítimas reais (mortos+feridos): 8,129
+Total de acidentes únicos: 2,154
+Acidentes de infraestrutura: 236 (11.0%)
+Vítimas de acidentes de infraestrutura: 1,703 (20.9%)
+Média de vítimas/acidente (geral): 3.77
+Média de vítimas/acidente (infraestrutura): 2.71
+Acidentes fatais: 23 (9.7%)
+
+2. ANÁLISE DE REDUÇÃO DIMENSIONAL
+--------------------------------------------------------------------------------
+Método utilizado: MCA
+
+3. ANÁLISE DE CLUSTER
+--------------------------------------------------------------------------------
+Número de clusters: 10
+Coeficiente de Silhueta: 0.373
+Davies-Bouldin Index: 0.926
+
+Distribuição dos clusters:
+  Cluster 0: 12 acidentes (5.1%)
+  Cluster 1: 43 acidentes (18.2%)
+  Cluster 2: 18 acidentes (7.6%)
+  Cluster 3: 25 acidentes (10.6%)
+  Cluster 4: 20 acidentes (8.5%)
+  Cluster 5: 43 acidentes (18.2%)
+  Cluster 6: 8 acidentes (3.4%)
+  Cluster 7: 20 acidentes (8.5%)
+  Cluster 8: 35 acidentes (14.8%)
+  Cluster 9: 12 acidentes (5.1%)
+
+4. TESTES ESTATÍSTICOS
+--------------------------------------------------------------------------------
+           Variável          Teste Estatística p-valor Sig.
+   Total de Vítimas Kruskal-Wallis      12.532  0.1850   ns
+   Número de Mortos Kruskal-Wallis      99.377  0.0000  ***
+     Feridos Graves Kruskal-Wallis      42.154  0.0000  ***
+      Feridos Leves Kruskal-Wallis      20.087  0.0174    *
+Índice de Gravidade Kruskal-Wallis      82.924  0.0000  ***
+
+5. CORREÇÃO DE BONFERRONI
+--------------------------------------------------------------------------------
+Nível α ajustado: 0.0100
+
+           Variável p-valor p-ajustado Significativo
+   Total de Vítimas  0.1850     0.9250           Não
+   Número de Mortos  0.0000     0.0000           Sim
+     Feridos Graves  0.0000     0.0000           Sim
+      Feridos Leves  0.0174     0.0870           Não
+Índice de Gravidade  0.0000     0.0000           Sim
+
+6. CONCLUSÕES
+--------------------------------------------------------------------------------
+- Acidentes de infraestrutura representam 10.9% dos acidentes
+- Média de vítimas (geral): 3.77
+- Média de vítimas (infraestrutura): 2.71
+- Identificados 10 padrões distintos de acidentes
+- 4 variável(is) apresentou(aram) diferença significativa entre clusters

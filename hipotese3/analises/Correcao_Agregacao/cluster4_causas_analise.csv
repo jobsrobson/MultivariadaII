@@ -1,0 +1,22 @@
+Causa,N_Cluster4,%_Cluster4,N_Outros,%_Outros,Over-representation,Teste,p-valor,Significativo
+Pista esburacada,0,0.0,0,0.0,inf,N/A,1.0,Não
+Falta de acostamento,1,5.0,0,0.0,inf,Fisher,0.0847457627118644,Não
+Sistema de drenagem ineficiente,0,0.0,0,0.0,inf,N/A,1.0,Não
+Restrição de visibilidade em curvas horizontais,0,0.0,0,0.0,inf,N/A,1.0,Não
+Restrição de visibilidade em curvas verticais,1,5.0,1,0.4629629629629629,10.8,Fisher,0.16263974035340784,Não
+Iluminação deficiente,3,15.0,17,7.87037037037037,1.9058823529411766,Fisher,0.3898184309974437,Não
+Demais falhas na via,1,5.0,7,3.2407407407407405,1.542857142857143,Fisher,0.5130834254431295,Não
+Falta de elemento de contenção que evite a saída do leito carroçável,1,5.0,10,4.62962962962963,1.08,Fisher,1.0,Não
+Pista Escorregadia,2,10.0,23,10.648148148148149,0.9391304347826086,Fisher,1.0,Não
+Acesso irregular,0,0.0,15,6.944444444444445,0.0,Fisher,0.6231233223551675,Não
+Acumulo de óleo sobre o pavimento,0,0.0,9,4.166666666666666,0.0,Fisher,1.0,Não
+Acumulo de água sobre o pavimento,0,0.0,18,8.333333333333332,0.0,Fisher,0.3765851144223441,Não
+Acumulo de areia ou detritos sobre o pavimento,0,0.0,6,2.7777777777777777,0.0,Fisher,1.0,Não
+Declive acentuado,0,0.0,3,1.3888888888888888,0.0,Fisher,1.0,Não
+Curva acentuada,0,0.0,3,1.3888888888888888,0.0,Fisher,1.0,Não
+Desvio temporário,0,0.0,1,0.4629629629629629,0.0,Fisher,1.0,Não
+Sinalização mal posicionada,0,0.0,4,1.8518518518518516,0.0,Fisher,1.0,Não
+Ausência de sinalização,0,0.0,5,2.314814814814815,0.0,Fisher,1.0,Não
+Afundamento ou ondulação no pavimento,0,0.0,2,0.9259259259259258,0.0,Fisher,1.0,Não
+Acostamento em desnível,0,0.0,2,0.9259259259259258,0.0,Fisher,1.0,Não
+Deficiência do Sistema de Iluminação/Sinalização,0,0.0,6,2.7777777777777777,0.0,Fisher,1.0,Não
