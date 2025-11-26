@@ -21,12 +21,12 @@ st.write("""
 Este aplicativo foi desenvolvido para colocar em prática **técnicas de análise multivariada** aprendidas na matéria de análise multivariada do curso de **Ciência de Dados e Inteligência Artificial** do **IESB**, ministrada pela professora **Nátalia Evangelista**. As técnicas utilizadas incluem **Análise de Componentes Principais (PCA), Análise de Correspondência Múltipla (MCA) e clustering**, aplicadas ao contexto dos transportes na RIDE-DF.
          
 ### Autores
-- **Enzo**
+- **Enzo Rodrigues Teixeira de Andrade**
 - **Felipe Toledo Neves**
 - **Luca Adriano Melo Mendonça Soares**
-- **Marley**
-- **Maycon**
-- **Robson Ricardo Silva Leite**
-- **Victor Kauan**
-- **Vinicius de Paula**
+- **Marley Abe Silva**
+- **Maycon Moriy Abe Machado**
+- **Robson Ricardo Leite da Silva**
+- **Victor Kauan Moreno de Brito**
+- **Vinicius de Paula Ribeiro**
 """)
