@@ -11,3 +11,4 @@ prince
 factor_analyzer
 scipy
 sqlalchemy
+statsmodels
