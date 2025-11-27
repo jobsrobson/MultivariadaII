@@ -346,7 +346,7 @@ with st.container(border=True):
         template="simple_white",
         margin=dict(l=50, r=50, t=50, b=50)
     )
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 # ===========================================
@@ -451,7 +451,7 @@ with st.container(border=True):
             Porém, nas outras cidades os óbitos possuem um peso maior quando comparados à Brasília em suas cargas canônicas.""")
 
     st.markdown("<br>", unsafe_allow_html=True)
-    
+
     # Cross-loadings X->Y
     col1, col2 = st.columns(2, border=True, gap="small")
     with col1:
