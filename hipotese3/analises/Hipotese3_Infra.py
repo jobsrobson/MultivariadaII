@@ -114,7 +114,7 @@ print("="*80)
 print("\n[1/8] Carregando e processando dados...")
 
 # Carregar dados
-df = pd.read_csv('/home/jobsr/Documents/MultivariadaII/data/acidente_transito.csv', sep=';', low_memory=False)
+df = pd.read_csv('/home/jobsr/Documents/GitHub/MultivariadaII/hipotese3/data/acidente_transito.csv', sep=';', low_memory=False)
 
 print(f"Total de registros (vítimas): {len(df):,}")
 print(f"Acidentes únicos: {df['id'].nunique():,}")

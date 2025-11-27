@@ -15,6 +15,8 @@ from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
 import unicodedata
+import plotly.express as px
+import plotly.graph_objects as go
 
 # funções auxiliares
 def normalizar_texto(texto):
@@ -155,97 +157,162 @@ kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
 df_analise['cluster'] = kmeans.fit_predict(X_scaled)
 
 # =========================  Dashboard  =========================
-st.title("Análise de Acidentes de Trânsito por Município e PIB")
-st.write(f"Acidentes agrupados: {df_acidentes_count.shape[0]} municípios.")
+st.markdown("<h2>Hipótese 4: Perfil Econômico dos Municípios<br>e os Acidentes de Trânsito</h2>" , unsafe_allow_html=True)
+st.markdown("""
+O perfil econômico dos municípios também pode influenciar os padrões de acidentes. Contextos de maior vulnerabilidade social podem estar associados a menor acesso a veículos seguros, infraestrutura deficiente e maior exposição a riscos no trânsito. Esta hipótese pretende explorar como o Produto Interno Bruto (PIB) dos municípios se relaciona com os índices de acidentes.
+""")
 
-st.subheader("Top 5 Municípios com Maior Taxa de Acidentes")
-st.dataframe(df_exibicao.sort_values(by='taxa_acidentes_100k', ascending=False).head(5))
 
-st.subheader("Correlação entre PIB per Capita e Taxa de Acidentes por 100 mil Habitantes")
+st.info(f"Municípios agrupados: {df_acidentes_count.shape[0]} municípios.")
 
-fig, ax = plt.subplots(figsize=(12, 8))
+st.markdown("<br>", unsafe_allow_html=True)
 
-# Plotar pontos
-sns.regplot(
-    x='vl_pib_per_capta',
-    y='taxa_acidentes_100k',
-    ax=ax,
-    data=df_analise,
-    scatter_kws={'s': 100, 'alpha': 0.7, 'color': 'steelblue'}, # Estilo dos pontos
-    line_kws={'color': 'red', 'linestyle': '--'} # Linha de tendência
-)
+with st.container(border=True):
 
-# Adicionar Rótulos (Nomes dos Municípios) aos pontos
-# Isso ajuda a identificar Brasília e outros destaques
-for i in range(df_analise.shape[0]):
-    plt.text(
-        df_analise.vl_pib_per_capta.iloc[i] + 500, # Ajuste leve na posição X
-        df_analise.taxa_acidentes_100k.iloc[i],
-        df_analise.chave_municipio.iloc[i],
-        fontsize=9,
-        alpha=0.7
+    st.markdown("<b>Top 5 Municípios da RIDE-DF com Maior Taxa de Acidentes</b>", unsafe_allow_html=True)
+
+    # Renomear colunas para exibição
+    df_exibicao_display = df_exibicao.rename(columns={
+        'uf': 'UF',
+        'chave_municipio': 'Município',
+        'populacao_total': 'População Total',
+        'vl_pib_per_capta': 'PIB per Capita (R$)',
+        'total_acidentes': 'Total de Acidentes',
+        'taxa_acidentes_100k': 'Taxa de Acidentes por 100 mil hab.'
+    })
+
+    st.dataframe(df_exibicao_display.sort_values(by='Taxa de Acidentes por 100 mil hab.', ascending=False).head(5))
+
+
+with st.container(border=True):
+    st.markdown("<b>Correlação entre PIB per Capita e Taxa de Acidentes por 100 mil Habitantes</b>", unsafe_allow_html=True)
+
+    fig = px.scatter(
+        df_analise,
+        x='vl_pib_per_capta',
+        y='taxa_acidentes_100k',
+        text='chave_municipio',
+        labels={
+            'vl_pib_per_capta': 'PIB per Capita (R$)',
+            'taxa_acidentes_100k': 'Taxa de Acidentes por 100k habitantes'
+        },
+        title=" ",
+        template='plotly_white'
     )
 
-plt.title(f'Relação: Riqueza (PIB per capita) vs Segurança no Trânsito\nCorrelação: {corr_coef:.2f}', fontsize=14)
-plt.xlabel('PIB per Capita (R$)', fontsize=12)
-plt.ylabel('Acidentes por 100k habitantes', fontsize=12)
-plt.grid(True, linestyle=':', alpha=0.6)
-plt.tight_layout()
-st.pyplot(fig)
+    # Adicionar linha de tendência
+    fig.update_traces(marker=dict(size=10, opacity=0.7, color='steelblue'), textposition='top center')
+    fig.add_trace(go.Scatter(
+        x=df_analise['vl_pib_per_capta'],
+        y=df_analise['vl_pib_per_capta'] * corr_coef + df_analise['taxa_acidentes_100k'].mean(),
+        mode='lines',
+        name='Tendência',
+        line=dict(color='red', dash='dash')
+    ))
 
-
-st.write(f"Coeficiente de Correlação (Pearson): {corr_coef:.4f}.\t P-valor: {p_value:.4f}.\t Interpretação: Correlação {interpretacao} {tipo}")
-
-st.header("Análise de Variância (ANOVA) entre Faixas de Renda")
-st.write(f"Estatística F: {f_stat:.4f}")
-st.write(f"P-valor (ANOVA): {p_value_anova:.4f}")
-
-if p_value_anova < 0.05:
-    st.write(">> Conclusão: Há diferença estatisticamente significativa entre os grupos de renda.")
-else:
-    st.write(">> Conclusão: NÃO há diferença significativa. A taxa de acidentes é parecida independente da faixa de renda.")
-
-# Visualização da ANOVA (Boxplot)
-fig, ax = plt.subplots(figsize=(8, 5))
-sns.boxplot(x='faixa_pib', y='taxa_acidentes_100k', data=df_analise, palette="Set2", ax=ax)
-plt.title('Distribuição de Acidentes por Faixa de Renda (ANOVA)')
-plt.ylabel('Acidentes por 100k hab.')
-plt.grid(True, linestyle=':', alpha=0.5)
-st.pyplot(fig)
-
-
-st.header("Clustering dos Municípios por PIB e Taxa de Acidentes")
-
-
-fig, ax = plt.subplots(figsize=(10, 6))
-sns.scatterplot(
-    x='vl_pib_per_capta',
-    y='taxa_acidentes_100k',
-    hue='cluster',
-    data=df_analise,
-    ax=ax,
-    palette='viridis',
-    s=150,
-    style='cluster'
-)
-
-# Adicionar nomes
-for i in range(df_analise.shape[0]):
-    plt.text(
-        df_analise.vl_pib_per_capta.iloc[i],
-        df_analise.taxa_acidentes_100k.iloc[i]+50,
-        df_analise.chave_municipio.iloc[i],
-        fontsize=8,
-        color='black'
+    # Ajustar layout
+    fig.update_layout(
+        xaxis_title='PIB per Capita (R$)',
+        yaxis_title='Taxa de Acidentes por 100k habitantes',
+        title_font_size=16,
+        title_x=0.5,
+        showlegend=False,
+        margin=dict(t=30, b=50, l=50, r=10)
+        
     )
 
-plt.title('Agrupamento de Municípios (Clusterização K-Means)')
-plt.xlabel('PIB per Capita')
-plt.ylabel('Taxa de Acidentes')
-plt.legend(title='Grupo Identificado')
-plt.grid(True, linestyle='--', alpha=0.5)
-st.pyplot(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
-# Interpretar os Clusters (Centróides)
-st.write("Perfil Médio dos Grupos Encontrados:")
-st.dataframe(df_analise.groupby('cluster')[['vl_pib_per_capta', 'taxa_acidentes_100k']].mean())
+    st.dataframe(pd.DataFrame({
+        "Métrica": ["Coeficiente de Correlação (Pearson)", "P-valor", "Interpretação"],
+        "Valor": [f"{corr_coef:.4f}", f"{p_value:.4f}", f"Correlação {interpretacao} {tipo}"]
+    }), hide_index=True)
+
+
+
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<h3>Análise de Variância (ANOVA) entre Faixas de Renda</h3>" , unsafe_allow_html=True)
+
+
+with st.container(border=True):
+    st.markdown("""
+    Para entender melhor como o perfil econômico afeta a taxa de acidentes, realizamos uma Análise de Variância (ANOVA). Dividimos os municípios em três grupos com base no PIB per capita: Baixa Renda, Média Renda e Alta Renda. A ANOVA nos ajuda a determinar se há diferenças estatisticamente significativas nas taxas de acidentes entre esses grupos.
+    """)
+    st.dataframe(pd.DataFrame({
+        "Métrica": ["Estatística F", "P-valor (ANOVA)"],
+        "Valor": [f"{f_stat:.4f}", f"{p_value_anova:.4f}"]
+    }), hide_index=True)
+
+    if p_value_anova < 0.05:
+        st.success("**Conclusão**: Há diferença estatisticamente significativa entre os grupos de renda.")
+    else:
+        st.error("**Conclusão**: NÃO há diferença significativa. A taxa de acidentes é parecida independente da faixa de renda.")
+
+
+    # Visualização da ANOVA (Boxplot) com Plotly
+    fig = px.box(
+        df_analise,
+        x='faixa_pib',
+        y='taxa_acidentes_100k',
+        color='faixa_pib',
+        title='',
+        labels={
+            'faixa_pib': 'Faixa de Renda',
+            'taxa_acidentes_100k': 'Acidentes por 100k hab.'
+        },
+        template='plotly_white',
+        color_discrete_sequence=px.colors.qualitative.Set2
+    )
+    fig.update_layout(
+        xaxis_title='Faixa de Renda',
+        yaxis_title='Acidentes por 100k hab.',
+        showlegend=False,
+        margin=dict(t=30, b=50, l=50, r=10)
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<h3>Clustering dos Municípios por PIB e Taxa de Acidentes</h3>" , unsafe_allow_html=True)
+
+with st.container(border=True):
+
+    st.markdown("<h6>Agrupamento de Municípios - K-Means</h6>" , unsafe_allow_html=True)
+
+    # Visualização do Clustering com Plotly
+    fig = px.scatter(
+        df_analise,
+        x='vl_pib_per_capta',
+        y='taxa_acidentes_100k',
+        color='cluster',
+        text='chave_municipio',
+        title=' ',
+        labels={
+            'vl_pib_per_capta': 'PIB per Capita',
+            'taxa_acidentes_100k': 'Taxa de Acidentes por 100k hab.',
+            'cluster': 'Cluster'
+        },
+        template='plotly_white',
+        color_continuous_scale=px.colors.sequential.Viridis
+    )
+    fig.update_traces(marker=dict(size=10, opacity=0.7), textposition='top center')
+    fig.update_layout(
+        xaxis_title='PIB per Capita',
+        yaxis_title='Taxa de Acidentes por 100k hab.',
+        title_font_size=16,
+        title_x=0.5,
+        margin=dict(t=30, b=50, l=50, r=10)
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("<h6>Perfil Médio dos Grupos Encontrados</h6>" , unsafe_allow_html=True)
+
+    # RENOMEAR COLUNAS PARA EXIBIÇÃO
+    df_analise_display = df_analise.rename(columns={
+        'vl_pib_per_capta': 'PIB per Capita (R$)',
+        'taxa_acidentes_100k': 'Taxa de Acidentes por 100 mil hab.'
+    })
+    df_cluster_summary = df_analise_display.groupby('cluster')[['PIB per Capita (R$)', 'Taxa de Acidentes por 100 mil hab.']].mean().reset_index()
+    st.dataframe(df_cluster_summary)
