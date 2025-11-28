@@ -6,7 +6,7 @@ import streamlit as st
 pg = st.navigation([
     st.Page("pages/menu.py", title="Menu Principal", icon="🏠"),
     st.Page("pages/acidentes_frota_nova.py", title="Frotas Mais Novas Geram Menos Acidentes", icon="1️⃣"),
-    st.Page("pages/acidentes_infra.py", title="Infraestrutura Viária e Acidentes", icon="2️⃣"),
+    st.Page("pages/acidentes_infra.py", title="Infraestrutura Viária e Acidentes", icon="2"),
     st.Page("pages/acidentes_pib.py", title="PIB e Acidentes de Trânsito", icon="3️⃣"),
     st.Page("pages/acidentes_frota.py", title="Frota de Veículos e Acidentes", icon="4️⃣")
 ])
