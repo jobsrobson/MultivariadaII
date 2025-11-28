@@ -26,7 +26,7 @@ with col2:
 with col3:
     st.page_link("pages/acidentes_pib.py", label="Acidentes e o PIB dos Municípios", icon="💰")
 with col4:
-    st.page_link("pages/acidentes_infra.py", label="Acidentes e Infraestrutura Viária", icon="🚧")
+    st.page_link("pages/acidentes_infraestrutura.py", label="Acidentes e Infraestrutura Viária", icon="🚧")
 
 st.divider()
 
