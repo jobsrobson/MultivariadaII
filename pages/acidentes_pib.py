@@ -157,7 +157,7 @@ kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
 df_analise['cluster'] = kmeans.fit_predict(X_scaled)
 
 # =========================  Dashboard  =========================
-st.markdown("<h2>Hipótese 4: Perfil Econômico dos Municípios<br>e os Acidentes de Trânsito</h2>" , unsafe_allow_html=True)
+st.markdown("<h2>Hipótese 3: Perfil Econômico dos Municípios<br>e os Acidentes de Trânsito</h2>" , unsafe_allow_html=True)
 st.markdown("""
 O perfil econômico dos municípios também pode influenciar os padrões de acidentes. Contextos de maior vulnerabilidade social podem estar associados a menor acesso a veículos seguros, infraestrutura deficiente e maior exposição a riscos no trânsito. Esta hipótese pretende explorar como o Produto Interno Bruto (PIB) dos municípios se relaciona com os índices de acidentes.
 """)

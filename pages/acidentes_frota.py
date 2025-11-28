@@ -233,7 +233,7 @@ def executar_cca_simples(df_BR, df_OUT):
 # ---------------------------
 # Título do Dashboard
 # ---------------------------
-st.markdown("<h2>Hipótese 5: Investigação entre o Crescimento da Frota Veicular<br>e a Ocorrência de Acidentes de Trânsito</h2>", unsafe_allow_html=True)
+st.markdown("<h2>Hipótese 4: Investigação entre o Crescimento da Frota Veicular<br>e a Ocorrência de Acidentes de Trânsito</h2>", unsafe_allow_html=True)
 
 st.markdown("""
 Esta análise investiga a relação entre o crescimento da frota de veículos e a ocorrência de acidentes de trânsito nos municípios da RIDE-DF. Utilizando dados de frota veicular e registros de acidentes, buscamos compreender como o aumento no número de veículos impacta a segurança viária. Através de técnicas multivariadas, como Análise Fatorial e Análise de Correlação Canônica (CCA), exploramos padrões e correlações entre o crescimento da frota e a frequência de acidentes, visando fornecer insights valiosos para políticas públicas de trânsito e planejamento urbano.

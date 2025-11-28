@@ -92,7 +92,7 @@ def simplificar_tracado(x):
 
 # ==================== TÍTULO E INTRODUÇÃO ====================
 
-st.markdown("<h2>Hipótese 3: Avaliação da Infraestrutura Viária e sua<br>Relação com a Ocorrência e Gravidade dos Acidentes</h2>", unsafe_allow_html=True)
+st.markdown("<h2>Hipótese 2: Avaliação da Infraestrutura Viária e sua<br>Relação com a Ocorrência e Gravidade dos Acidentes</h2>", unsafe_allow_html=True)
 
 st.markdown("""
 Esta análise investiga a relação entre **causas relacionadas à infraestrutura viária** e a **gravidade dos acidentes de trânsito** 
