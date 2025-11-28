@@ -18,12 +18,14 @@ st.markdown("""
 Este aplicativo é dividido em cinco seções principais, cada uma focada em uma hipótese diferente relacionada aos transportes na RIDE-DF. Utilize o menu lateral ou os botões abaixo para navegar entre as seções:
 """)
 
-col1, col2, col3 = st.columns(3, gap="small", border=True)
+col1, col2, col3, col4 = st.columns(4, gap="small", border=True)
 with col1:
-    st.page_link("pages/acidentes_frota.py", label="Acidentes e Frota de Veículos", icon="🚗")
+    st.page_link("pages/acidentes_frota_nova.py", label="Frotas Mais Novas Geram Menos Acidentes", icon="🆕")
 with col2:
-    st.page_link("pages/acidentes_pib.py", label="Acidentes e o PIB dos Municípios", icon="💰")
+    st.page_link("pages/acidentes_frota.py", label="Acidentes e Frota de Veículos", icon="🚗")
 with col3:
+    st.page_link("pages/acidentes_pib.py", label="Acidentes e o PIB dos Municípios", icon="💰")
+with col4:
     st.page_link("pages/acidentes_infra.py", label="Acidentes e Infraestrutura Viária", icon="🚧")
 
 st.divider()
